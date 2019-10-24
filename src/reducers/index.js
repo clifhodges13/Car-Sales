@@ -27,7 +27,8 @@ export function reducer(state = initialState, action) {
         ...state,
         car: {
           ...state.car,
-          features: [...state.car.features, action.payload]
+          features: [...state.car.features, action.payload],
+          price: (state.car.price + action.payload.price)
         }
       }
       
@@ -38,7 +39,8 @@ export function reducer(state = initialState, action) {
         ...state,
         car: {
           ...state.car,
-          features: [...newFeatures]
+          features: [...newFeatures],
+          price: (state.car.price - action.payload.price)
         }
       }
 

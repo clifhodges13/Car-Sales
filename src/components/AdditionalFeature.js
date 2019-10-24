@@ -6,6 +6,7 @@ const AdditionalFeature = props => {
 
   const handleClick = e => {
     e.preventDefault()
+    console.log(props.feature)
     props.addItem(props.feature)
   }
 
